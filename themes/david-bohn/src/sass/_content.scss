@@ -3,20 +3,24 @@
 .fragment {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
 
-  animation: fade-in ease-in 1;
-  animation-fill-mode: forwards;
+@include media-breakpoint-up(md) {
+  .fragment {
+    animation: fade-in ease-in 1;
+    animation-fill-mode: forwards;
 
-  animation-duration: 1s;
-  animation-delay: $typewriter-duration;
+    animation-duration: 1s;
+    animation-delay: $typewriter-duration;
+  }
+
+  .cssanimations .fragment {
+    opacity: 0;
+  }
 }
 
 .fragment h2 {
   font-family: 'Comfortaa', sans-serif;
-}
-
-.cssanimations .fragment {
-  opacity: 0;
 }
 
 .page-content {
