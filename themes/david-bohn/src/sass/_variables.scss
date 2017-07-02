@@ -8,3 +8,12 @@ $typewriter-cursor: #64C756;
 $footer-bg: #3c6ac7;
 //$footer-text: #caddf2;
 $footer-text: lighten($footer-bg, 35%);
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

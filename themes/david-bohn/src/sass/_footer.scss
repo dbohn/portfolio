@@ -12,10 +12,31 @@ footer {
   color: $footer-text;
 }
 
+footer a {
+  color: $footer-text;
+  text-decoration: underline;
+
+  &:hover {
+    color: darken($footer-text, 5%);
+  }
+}
+
 footer .col-md {
   padding: 2rem;
 }
 
 footer .col-md:not(:last-child) {
   border-right: 1px solid lighten($footer-bg, 10%);
+}
+
+footer ul li {
+  /**
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 14">
+<path fill="#c7d4ef" d="M0.37,12.638l5.726-5.565L0.531,1.347C0.252,1.059,0.261,0.601,0.547,0.321
+    c0.289-0.279,0.746-0.272,1.026,0.016l6.062,6.24c0,0.002,0.006,0.004,0.008,0.006c0.068,0.07,0.119,0.156,0.156,0.244
+    C7.902,7.088,7.846,7.399,7.631,7.61c-0.002,0.004-0.006,0.004-0.01,0.006l-6.238,6.063c-0.143,0.141-0.331,0.209-0.514,0.205
+    c-0.187-0.006-0.372-0.078-0.511-0.221C0.076,13.376,0.083,12.919,0.37,12.638"></path>
+</svg>
+   */
+  list-style-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDE0Ij4NCjxwYXRoIGZpbGw9IiNjN2Q0ZWYiIGQ9Ik0wLjM3LDEyLjYzOGw1LjcyNi01LjU2NUwwLjUzMSwxLjM0N0MwLjI1MiwxLjA1OSwwLjI2MSwwLjYwMSwwLjU0NywwLjMyMQ0KICAgIGMwLjI4OS0wLjI3OSwwLjc0Ni0wLjI3MiwxLjAyNiwwLjAxNmw2LjA2Miw2LjI0YzAsMC4wMDIsMC4wMDYsMC4wMDQsMC4wMDgsMC4wMDZjMC4wNjgsMC4wNywwLjExOSwwLjE1NiwwLjE1NiwwLjI0NA0KICAgIEM3LjkwMiw3LjA4OCw3Ljg0Niw3LjM5OSw3LjYzMSw3LjYxYy0wLjAwMiwwLjAwNC0wLjAwNiwwLjAwNC0wLjAxLDAuMDA2bC02LjIzOCw2LjA2M2MtMC4xNDMsMC4xNDEtMC4zMzEsMC4yMDktMC41MTQsMC4yMDUNCiAgICBjLTAuMTg3LTAuMDA2LTAuMzcyLTAuMDc4LTAuNTExLTAuMjIxQzAuMDc2LDEzLjM3NiwwLjA4MywxMi45MTksMC4zNywxMi42MzgiPjwvcGF0aD4NCjwvc3ZnPg==");
 }

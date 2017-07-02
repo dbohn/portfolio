@@ -9,12 +9,42 @@
             <div class="col-md">
                 <h5>Find me on</h5>
                 <ul>
-                    <li>GitHub</li>
-                    <li>Twitter</li>
-                    <li>Xing</li>
+                    <li><a href="https://github.com/dbohn">GitHub</a></li>
+                    <li><a href="https://twitter.com/faba101">Twitter</a></li>
+                    <li><a href="https://www.xing.com/profile/David_Bohn7">Xing</a></li>
                 </ul>
             </div>
-            <div class="col-md">C</div>
+            <div class="col-md">
+                <ul>
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.footer }}
+                    {{ if .HasChildren }}
+
+                    <li class="{{if $currentPage.HasMenuCurrent "footer" . }} active{{end}}">
+                        <a href="javascript:;" class="">
+                            {{ .Pre }}
+                            <span>{{ .Name }}</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                <ul class="sub">
+                    {{ range .Children }}
+                    <li{{if $currentPage.IsMenuCurrent "footer" . }} class="active"{{end}}><a href="{{.URL}}"> {{ .Name }} </a> </li>
+                    {{ end }}
+                </ul>
+                {{else}}
+                <li class="{{if $currentPage.HasMenuCurrent "footer" . }} active{{end}}">
+                    <a href="{{.URL}}">
+                        {{ .Pre }}
+                        <span>{{ .Name }}</span>
+                    </a>
+                    {{end}}
+                </li>
+                {{end}}</ul>
+                <p>
+                    Thanks to Steve Schoger for his awesome work on <a href="http://www.zondicons.com/">Zondicons</a> and
+                    <a href="http://www.heropatterns.com/">Heropatterns</a>, which he shared under CC BY-SA 4.0.
+                </p>
+            </div>
         </div>
     </div>
 </footer>

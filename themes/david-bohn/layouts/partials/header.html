@@ -2,12 +2,14 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <base href="{{ .Site.BaseURL }}">
     <title>{{ .Title }} : David Bohn</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Fira+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js"></script>
 </head>
 <body>
 <nav class="top d-flex justify-content-end">
@@ -21,6 +23,7 @@
                 <path d="M0 1 L40 1" class="focus"></path>
             </svg>
         </li>
+        {{ if (gt (where .Site.Pages "Section" "posts") 0 ) }}
         <li>
             <a class="menu-link" href="#">
                 Blog
@@ -30,9 +33,10 @@
                 <path d="M0 1 L40 1" class="focus"></path>
             </svg>
         </li>
+        {{ end }}
         {{ range where (where .Site.Pages "Section" "article") "IsPage" true }}
         <li>
-            <a class="menu-link{{ if (eq $.RelPermalink .RelPermalink) }} active{{ end }}" href="{{ .Permalink }}">
+            <a class="menu-link{{ if (eq $.RelPermalink .RelPermalink) }} active{{ end }}" href="{{ .URL }}">
                 {{ .LinkTitle }}
             </a>
             <svg class="line" viewBox="0 0 40 2" preserveAspectRatio="none">

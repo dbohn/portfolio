@@ -1,6 +1,8 @@
 $enable-flex: true;
 
 $link-color: #3c6ac7;
+$headings-font-family: 'Comfortaa', sans-serif;
+$headings-line-height:   1.2;
 
 $overlap: 40%;
 
@@ -37,6 +39,7 @@ nav.top {
   justify-content: center;
   align-items: center;
   align-content: center;
+  flex-wrap: wrap;
 
   padding-left: 0;
   margin-bottom: 0;
@@ -54,11 +57,12 @@ nav.top {
   display: block;
 }
 
-.menu-link:hover {
+.menu-link:hover, .menu-link:focus {
   text-decoration: none;
+  outline: none;
 }
 
-.menu-link:hover ~ .line .focus, .menu-link.active ~ .line .focus {
+.menu-link:hover ~ .line .focus, .menu-link.active ~ .line .focus, .menu-link:focus ~ .line .focus {
   opacity: 1;
   stroke-dasharray: 40, 0;
   stroke-dashoffset: 0;
