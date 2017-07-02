@@ -1,0 +1,40 @@
+@import "_variables.scss";
+
+.fragment {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  animation: fade-in ease-in 1;
+  animation-fill-mode: forwards;
+
+  animation-duration: 1s;
+  animation-delay: $typewriter-duration;
+}
+
+.fragment h2 {
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.cssanimations .fragment {
+  opacity: 0;
+}
+
+.svg-bigimage svg {
+  width: 100%;
+  height: 25vh;
+  fill: #f0f0f0;
+
+  /*& path {
+    fill: #f0f0f0;
+  }*/
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

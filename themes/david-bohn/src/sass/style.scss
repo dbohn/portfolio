@@ -1,0 +1,65 @@
+$enable-flex: true;
+
+$link-color: #3c6ac7;
+
+$overlap: 40%;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "_header.scss";
+@import "_content.scss";
+@import "_footer.scss";
+
+nav.top {
+  font-family: 'Comfortaa', sans-serif;
+  padding: .7rem;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  stroke: $gray-lighter;
+  //margin-top: 0.5rem;
+}
+
+.line .focus {
+  opacity: 0;
+  stroke: $link-hover-color;
+  transition: all 0.2s;
+  stroke-dasharray: 0, 20;
+  stroke-dashoffset: -20;
+}
+
+.top-menu {
+  list-style-type: none;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.top-menu li {
+  line-height: 0;
+  padding-left: 0;
+}
+
+.menu-link {
+  line-height: 1.5rem;
+  padding-top: .5rem;
+  text-align: center;
+  display: block;
+}
+
+.menu-link:hover {
+  text-decoration: none;
+}
+
+.menu-link:hover ~ .line .focus, .menu-link.active ~ .line .focus {
+  opacity: 1;
+  stroke-dasharray: 40, 0;
+  stroke-dashoffset: 0;
+}

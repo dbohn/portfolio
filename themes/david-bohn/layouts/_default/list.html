@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Fira+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+</head>
+<body>
+<nav class="top d-flex justify-content-end">
+    <ul class="top-menu">
+        <li>
+            <a class="menu-link active" href="#">
+                About me
+            </a>
+            <svg class="line" viewBox="0 0 40 2" preserveAspectRatio="none">
+                <!--<path d="M0 1 L40 1"></path>-->
+                <path d="M0 1 L40 1" class="focus"></path>
+            </svg>
+        </li>
+        <li>
+            <a class="menu-link" href="#">
+                References
+            </a>
+            <svg class="line" viewBox="0 0 40 2" preserveAspectRatio="none">
+                <!--<path d="M0 1 L40 1"></path>-->
+                <path d="M0 1 L40 1" class="focus"></path>
+            </svg>
+        </li>
+        <li>
+            <a class="menu-link" href="#">
+                Blog
+            </a>
+            <svg class="line" viewBox="0 0 40 2" preserveAspectRatio="none">
+                <!--<path d="M0 1 L40 1"></path>-->
+                <path d="M0 1 L40 1" class="focus"></path>
+            </svg>
+        </li>
+        <li>
+            <a class="menu-link" href="#">
+                Contact
+            </a>
+            <svg class="line" viewBox="0 0 40 2" preserveAspectRatio="none">
+                <!--<path d="M0 1 L40 1"></path>-->
+                <path d="M0 1 L40 1" class="focus"></path>
+            </svg>
+        </li>
+        <li>
+            <a class="menu-link" href="#">
+                Imprint
+            </a>
+            <svg class="line" viewBox="0 0 40 2" preserveAspectRatio="none">
+                <!--<path d="M0 1 L40 1"></path>-->
+                <path d="M0 1 L40 1" class="focus"></path>
+            </svg>
+        </li>
+    </ul>
+</nav>
+<header>
+    <div>
+        <h1 class="typewriter"><span class="shell-name">david-bohn</span> <span class="cursor">$</span> ./about-me</h1>
+    </div>
+</header>
+<section class="container">
+    <div class="row fragment">
+        <div class="col hidden-sm-down">
+            <svg class="svg-bigimage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 17H2a2 2 0 0 1-2-2V2C0 .9.9 0 2 0h16a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2h-5l4 2v1H3v-1l4-2zM2 2v11h16V2H2z"/></svg>
+            <!--<svg class="svg-bigimage" xmlns="http://www.w3.org/2000/svg" width="22.64" height="16.08" version="1.1" viewBox="0 0 80.22 56.96"><g transform="translate(-95.166 -362.36)"><rect x="101.62" y="362.36" width="66.35" height="42.72" rx="2" ry="2" fill="#ccc"/><rect x="105.18" y="366.24" width="59.23" height="34.63" rx="2" ry="2" fill="#fff"/><path d="m103.3 405.73h63.97c1.11 0 1.78 1.05 2.34 2l5.66 9.59c0.56 0.95-0.89 2-2 2h-75.96c-1.11 0-2.59-1.06-2-2l6-9.59c0.59-0.94 0.89-2 2-2z" fill="#ccc"/><g fill="#fff" fill-rule="evenodd" stroke="#ccc" stroke-width="1"><path d="m101.51 415.59 1.51-2.78h5.18l-1.27 2.78zM103.02 412.8l1.57-2.91"/><path d="m103.02 412.8 1.57-2.91h4.94l-1.33 2.91z"/><path d="m104.59 409.9 1.2-2.22h4.75l-1.02 2.22z"/><path d="m110.54 407.68h4.96l-0.82 2.22h-5.15z"/><path d="m109.53 409.9-1.33 2.91h5.41l1.07-2.91z"/><path d="m108.2 412.8-1.27 2.78h5.65l1.03-2.78z"/><path d="m112.58 415.59h5.71l0.78-2.78h-5.47z"/><path d="m113.61 412.8 1.07-2.91h5.21l-0.82 2.91z"/><path d="m114.68 409.9 0.82-2.22h5.01l-0.62 2.22h-5.21z"/><path d="m120.52 407.68h5.21l-0.42 2.22h-5.41z"/><path d="m119.89 409.9-0.82 2.91h5.68l0.55-2.91z"/><path d="m118.29 415.59 0.78-2.78h30.85l0.61 2.78z"/><path d="m124.76 412.8 0.55-2.91h5.54l-0.27 2.91z"/><path d="m125.31 409.9 0.42-2.22h5.33l-0.21 2.22z"/><path d="m130.57 412.8h5.83v-2.91h-5.55l-0.27 2.91z"/><path d="m130.84 409.9 0.21-2.22h5.34v2.22h-5.55z"/><path d="m136.39 407.68h6.28l0.25 2.22h-6.53z"/><path d="m136.39 409.9v2.91h6.85l-0.32-2.91z"/><path d="m142.67 407.68h6.13l0.49 2.22h-6.37z"/><path d="m142.92 409.9 0.32 2.91h6.69l-0.64-2.91z"/><path d="m149.93 412.8 0.61 2.78h6.56l-0.89-2.78z"/><path d="m149.93 412.8-0.64-2.91h5.98l0.93 2.91z"/><path d="m149.29 409.9-0.49-2.22h5.76l0.71 2.22z"/><path d="m154.56 407.68h5.65l0.94 2.22h-5.87z"/><path d="m155.27 409.9 0.93 2.91h6.16l-1.22-2.91z"/><path d="m156.21 412.8 0.89 2.78h6.44l-1.17-2.78z"/><path d="m163.54 415.59h6.03l-2.93-5.69h-5.49z"/><path d="m161.14 409.9-0.94-2.22h5.29l1.14 2.22z"/></g></g></svg>-->
+        </div>
+        <div class="col content">
+            <h2>Computer Scientist</h2>
+            <p>
+                In 2012 I began studying computer science at "Freie Universität Berlin" and graduated in 2015 as a Bachelor of Science...
+            </p>
+        </div>
+    </div>
+    <div class="row fragment">
+        <div class="col hidden-sm-down">
+            <svg class="svg-bigimage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M20 2.5V0L6 2v12.17A3 3 0 0 0 5 14H3a3 3 0 0 0 0 6h2a3 3 0 0 0 3-3V5.71L18 4.3v7.88a3 3 0 0 0-1-.17h-2a3 3 0 0 0 0 6h2a3 3 0 0 0 3-3V2.5z"/></svg>
+        </div>
+        <div class="col">
+            <h2>Artist</h2>
+            <p>
+                Musician, ... Understand computer science as a form of art...
+            </p>
+        </div>
+    </div>
+    <div class="row fragment">
+        <div class="col hidden-sm-down">
+
+        </div>
+        <div class="col">
+            <h2>Tech Enthusiast</h2>
+            <p>
+                Interest in web technologies, networking and IoT
+            </p>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <p>David Bohn <br>Hillmannstr. 23b <br>13467 Berlin</p>
+                <p>contact@dbohn.de</p>
+                <p>&copy; 2017, David Bohn</p>
+            </div>
+            <div class="col-md">
+                <h5>Find me on</h5>
+                <ul>
+                    <li>GitHub</li>
+                    <li>Twitter</li>
+                    <li>Xing</li>
+                </ul>
+            </div>
+            <div class="col-md">C</div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

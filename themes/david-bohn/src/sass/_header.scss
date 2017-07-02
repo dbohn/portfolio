@@ -1,0 +1,53 @@
+
+@import "_variables.scss";
+
+header.typewriter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f8f8f8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23f0f0f0' fill-opacity='1'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+header:not(.typewriter-small) {
+  height: 60vh;
+}
+
+header.typewriter-small {
+  padding: 3rem 0;
+}
+
+header.typewriter h1 {
+  font-family: 'Fira Mono', monospace;
+  text-shadow: 0 1px 2px #fff;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid $typewriter-cursor; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  //margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .2em; /* Adjust as needed */
+  animation:
+          typing $typewriter-duration steps($typewriter-steps, end),
+          blink-caret .75s step-end infinite;
+}
+
+.shell-name {
+  color: #64C756;
+  font-weight: bold;
+}
+
+.cursor {
+  color: #7E3841;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $typewriter-cursor; }
+}

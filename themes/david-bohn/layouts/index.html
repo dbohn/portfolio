@@ -1,0 +1,27 @@
+{{ partial "header" . }}
+
+<header class="typewriter">
+    <div>
+        <h1><span class="shell-name">david-bohn</span> <span class="cursor">$</span> ./about-me</h1>
+    </div>
+</header>
+
+<section class="container">
+    {{ range (where .Data.Pages "Section" "about-me").ByParam "position" }}
+    <div class="row fragment">
+        <div class="col hidden-sm-down">
+            <div class="svg-bigimage">
+                {{ $icon := .Params.icon | printf "icons/%s.svg" }}
+                {{ partial $icon . }}
+            </div>
+        </div>
+        <div class="col content">
+            <h2>{{ .Title }}</h2>
+            {{ .Content }}
+        </div>
+    </div>
+    {{ end }}
+</section>
+
+
+{{ partial "footer" . }}
