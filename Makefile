@@ -14,7 +14,7 @@ test:
 deploy:
 	envoy run deploy
 
-all: build push deploy
+all: build push
 
 dev:
 	hugo server --theme=david-bohn --buildDrafts
