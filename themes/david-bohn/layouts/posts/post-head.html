@@ -1,0 +1,10 @@
+<div class="article-image" style="background-image: url('/images/posts/{{ .Param "image" }}')"></div>
+<div class="article-info">
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <div class="small-infos">
+            <span class="reading-time">Reading time: {{ .ReadingTime }} minutes</span>
+            <span class="date">
+                {{ .Date.Format "02.01.2006" }}
+            </span>
+        </div>
+</div>

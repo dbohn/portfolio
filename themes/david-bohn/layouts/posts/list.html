@@ -1,0 +1,25 @@
+{{ partial "header" . }}
+
+<header class="typewriter typewriter-small">
+    <div>
+        <h1 class="typewriter typewriter-small"><span class="shell-name">david-bohn</span> <span class="cursor">$</span> ls .{{ .RelPermalink }}</h1>
+    </div>
+</header>
+<div class="container">
+    <div class="col-md-12">
+    {{ range first 1 .Pages }}
+            {{ .Render "preview" }}
+        {{ end }}
+    </div>
+
+    {{ if gt .Pages.Len 1 }}
+        {{ range after 1 .Pages }}
+            <div class="col-md-6 small-preview">
+                {{ .Render "preview" }}
+            </div>
+        {{ end }}
+    {{ end }}
+</div>
+
+
+{{ partial "footer" . }}
